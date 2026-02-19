@@ -56,3 +56,12 @@ services:
       - cart
       - user
       - rabbitmq
+  frontend: 
+    image: frontend:v1
+    container_name: frontend
+    depends_on:
+      - catalogue
+      - user
+      - cart
+      - shipping
+      - payment
